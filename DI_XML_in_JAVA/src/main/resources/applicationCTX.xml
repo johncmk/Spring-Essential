@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student2" class="com.javalec.ex.Student">
+		<constructor-arg value="Tom"></constructor-arg>
+		<constructor-arg value="24"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Soccer</value>
+				<value>Computer</value>
+			</list>
+		</constructor-arg>
+	
+		<property name="height" value="166"></property>
+		<property name="weight" value="65"></property>
+	</bean>
+
+</beans>

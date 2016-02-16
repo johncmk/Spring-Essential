@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+           				http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+           
+	<!-- inject ApplicationConfig Class -->
+	<context:annotation-config />
+	<bean class="com.javalec.ex.ApplicationConfig"/>
+	<!-- End -->
+
+	<!-- Using XML -->
+	<bean id="student2" class="com.javalec.ex.Student">
+		<constructor-arg value="Tom"></constructor-arg>
+		<constructor-arg value="24"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Soccer</value>
+				<value>Computer</value>
+			</list>
+		</constructor-arg>
+
+		<property name="height" value="166"/>		
+		<property name="weight" value="65"/>		
+	</bean>
+	<!-- End -->
+	
+</beans>
